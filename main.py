@@ -179,11 +179,13 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
     puntaje+=10 
     
   for numero_carga in range (5,0,-1):
-   sumar=random.randint(0,10)
-  sumar=sumar+puntaje
+   variable=random.randint(0,10)
+  sumar=variable+puntaje
+  
   print("Tienes " , puntaje , " puntos ... \nAhora deja que la suerte haga su trabajo ")
   time.sleep(2)
-  
+  print("Ganaste ", sumar)
+  print("Gracias a la suerte ganaste: " + aleatorio)
  # print("Excelente, has obtenido", sumar, "puntos ")
   print(RED+"\nGracias por jugar mi trivia, alcanzaste los " , sumar, "puntos"+RESET)
 
