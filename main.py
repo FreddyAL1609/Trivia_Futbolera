@@ -42,6 +42,10 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
 
   print(YELLOW+"\nIntento número:" + RESET, YELLOW+str(intentos)+RESET  )
   input("Presiona Enter para continuar ")
+  
+  for numero_carga in range (5,0,-1):
+   print ("Por favor espera " ,CYAN+str(numero_carga), "segundos"+RESET)
+   time.sleep(1)
 
   print (GREEN+"\n1)¿Qué pais fué el campeón del mundial Sudáfrica 2010? \n "+RESET)
   print ("a) Brasil")
@@ -184,8 +188,8 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   
   print("Tienes " , puntaje , " puntos ... \nAhora deja que la suerte haga su trabajo ")
   time.sleep(2)
-  print("Ganaste ", sumar)
-  print("Gracias a la suerte ganaste: " + aleatorio)
+ # print("Ganaste ", sumar)
+  print("\nGracias a la suerte ganaste: " ,CYAN+ str(variable) + RESET," puntos")
  # print("Excelente, has obtenido", sumar, "puntos ")
   print(RED+"\nGracias por jugar mi trivia, alcanzaste los " , sumar, "puntos"+RESET)
 
