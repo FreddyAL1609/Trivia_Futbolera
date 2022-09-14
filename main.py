@@ -41,7 +41,7 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   puntaje = 0
 
   print(YELLOW+"\nIntento número:" + RESET, YELLOW+str(intentos)+RESET  )
-  input("Presiona Enter para continuar ")
+  #input("Presiona Enter para continuar ")
   
   for numero_carga in range (5,0,-1):
    print ("Por favor espera " ,CYAN+str(numero_carga), "segundos"+RESET)
@@ -57,7 +57,7 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   
   respuesta_1 = input("\n Tu respuesta: ").lower()
   
-  while respuesta_1 not in ("a", "b", "c", "d"):
+  while respuesta_1 not in ("a", "b", "c", "d","x"):
     respuesta_1 = input("Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ")
   
   if respuesta_1 == "a":
@@ -72,6 +72,12 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
     print(RED+ "Incorrecto!", nombre, "Holanda no fue el campeón " + RESET)
     puntaje-=2
   #  print("Tienes " , puntaje, "puntos")
+  elif respuesta_1 == "x":
+    bonus_1=50
+    puntaje=puntaje + bonus_1
+    
+    print(BLUE+"Esto es un bonus secreto , has ganado: " ,str (bonus_1), " puntos." + RESET )
+    #print (nombre, "tienes", puntaje, "puntos")
   
   else:
     puntaje+=10
@@ -167,7 +173,7 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   # Almacenamos la respuesta del usuario en la variable "respuesta_4"
   respuesta_4 = input("\nTu respuesta: ").lower()
   
-  while respuesta_4 not in ("a", "b", "c", "d"):
+  while respuesta_4 not in ("a", "b", "c", "d","p"):
     respuesta_4 = input ("Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ")
   if respuesta_4 == "c":
     print (RED+"Totalmente incorrecto! ..."+RESET)
@@ -178,6 +184,12 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   elif respuesta_4 == "b":
     print (RED+"Incorrecto! ..."+RESET)
     puntaje-= 2
+  elif respuesta_4 == "p":
+    
+    bonus_2=20
+    puntaje=puntaje+bonus_2
+    print(BLUE+"Esto es un bonus secreto , has ganado: " ,str (bonus_2), " puntos." + RESET )
+    #print (nombre, "tienes", puntaje, "puntos")
   else:
     print (CYAN+"Correcto! ..."+RESET)
     puntaje+=10 
@@ -202,10 +214,11 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   #exit()
     # Cambiamos el valor de iniciar_trivia a False para evitar que se repita.
 
-
+"""
 for numero_carga in range (5,0,-1):
  print ("Por favor espera " ,numero_carga, "segundos")
  time.sleep(1)
+ """
  # input("Presiona Enter para continuar")
 # Pregunta 1
 
